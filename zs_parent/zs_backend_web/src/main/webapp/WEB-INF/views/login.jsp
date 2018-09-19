@@ -5,10 +5,10 @@
 <head>
 	<title>在线商城-后台管理系统</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="../css/bootstrap.min.css" />
-	<link rel="stylesheet" href="../css/mycss.css" />
-	<script type="text/javascript" src="../js/jquery.min.js"></script>
-	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="${pageContext.request.contextPath}css/bootstrap.min.css" />
+	<link rel="stylesheet" href="${pageContext.request.contextPath}css/mycss.css" />
+	<script type="text/javascript" src="${pageContext.request.contextPath}js/jquery.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}js/bootstrap.min.js"></script>
 </head>
 <body>
 <!-- 使用自定义css样式 div-signin 完成元素居中-->
@@ -41,7 +41,7 @@
 					</div>
 					<div class="col-sm-2">
 						<!-- 验证码 -->
-						<img class="img-rounded" src="../images/image.jpg" style="height: 32px; width: 70px;"/>
+						<img class="img-rounded" src="${pageContext.request.contextPath}images/image.jpg" style="height: 32px; width: 70px;"/>
 					</div>
 					<div class="col-sm-2">
 						<button type="button" class="btn btn-link">看不清</button>
