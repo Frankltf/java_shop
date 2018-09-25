@@ -1,1 +1,3 @@
 com\ltf\zs\App.class
+com\ltf\zs\service\impl\ProductTypeServiceImpl.class
+com\ltf\zs\service\ProductTypeService.class
