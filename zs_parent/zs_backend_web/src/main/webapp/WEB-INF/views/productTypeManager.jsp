@@ -19,6 +19,33 @@
     <script src="${pageContext.request.contextPath}/js/jquery.js"></script>
     <script src="${pageContext.request.contextPath}/js/bootstrap.js"></script>
     <script src="${pageContext.request.contextPath}/js/userSetting.js"></script>
+    <script src="${pageContext.request.contextPath}/js/bootstrap-paginator.js"></script>
+    <script>
+        $(function(){
+            $('#pagination').bootstrapPaginator({
+                bootstrapMajorVersion:3,
+                currentPage:${pageInfo.pageNum},
+                totalPages:${pageInfo.pages},
+                pageUrl:function(type,page, current){
+                    return '${pageContext.request.contextPath}/backend/productType/findAll?pageNum='+page;
+                },
+                itemTexts: function (type, page, current) {
+                    switch (type) {
+                        case "first":
+                            return "首页";
+                        case "prev":
+                            return "上一页";
+                        case "next":
+                            return "下一页";
+                        case "last":
+                            return "末页";
+                        case "page":
+                            return page;
+                    }
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -42,7 +69,7 @@
                 </thead>
                 <tbody id="tb">
 
-                    <c:forEach items="${productTypes}" var="productType">
+                    <c:forEach items="${pageInfo.list}" var="productType">
                     <tr>
                         <td>${productType.id}</td>
                         <td>${productType.name}</td>
@@ -59,6 +86,7 @@
                     </c:forEach>
                 </tbody>
             </table>
+            <ul id="pagination"></ul>
         </div>
     </div>
 </div>

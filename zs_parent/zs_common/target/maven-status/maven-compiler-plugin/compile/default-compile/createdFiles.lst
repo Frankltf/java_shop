@@ -1,1 +1,3 @@
 com\ltf\zs\App.class
+com\ltf\zs\common\constant\ProductTypeConstant.class
+com\ltf\zs\common\constant\PaginationConstant.class
