@@ -1,3 +1,6 @@
+com\ltf\zs\common\exception\ProductTypeExistException.class
 com\ltf\zs\App.class
+com\ltf\zs\common\constant\ResponseStatusConstant.class
+com\ltf\zs\common\util\ResponseResult.class
 com\ltf\zs\common\constant\ProductTypeConstant.class
 com\ltf\zs\common\constant\PaginationConstant.class

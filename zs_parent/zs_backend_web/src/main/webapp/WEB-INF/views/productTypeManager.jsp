@@ -45,6 +45,16 @@
                 }
             });
         });
+
+        function addProductType() {
+            $.post(
+                '${pageContext.request.contextPath}/backend/productType/add',
+                {'name':$('#productTypeName').val()},
+                function(result){
+                    console.log(result)
+                }
+            );
+        }
     </script>
 </head>
 
@@ -112,7 +122,7 @@
                 <br>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary addProductType">添加</button>
+                <button class="btn btn-primary addProductType" onclick="addProductType()">添加</button>
                 <button class="btn btn-primary cancel" data-dismiss="modal">取消</button>
             </div>
         </div>
